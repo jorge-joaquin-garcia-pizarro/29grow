@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>29Grow | Inicio - Indoor y Cosecha</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <h1>29GROW</h1>
+                    <p>Indoor · Cultivo · Cosecha</p>
+                </div>
+                <div class="nav-wrapper">
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html" class="active">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                    <div class="cart-icon-header" id="cartIconHeader">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                    <div class="menu-icon" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar del Carrito -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Tu carrito</h3>
+            <button class="close-cart" id="closeCartBtn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-msg">🛒 El carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Finalizar compra</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <main>
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="badge-grow">🌿 Temporada Indoor 2026</div>
+                <h2>Todo para tu <span class="highlight">cultivo interior</span></h2>
+                <p>Más de 200 productos especializados. Iluminación, nutrientes, sustratos, control climático y postcosecha.</p>
+                <a href="catalogo.html" class="btn-grow"><i class="fas fa-store"></i> Ver catálogo completo</a>
+            </div>
+        </section>
+
+        <!-- PRODUCTOS DESTACADOS -->
+        <section id="destacados">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-star"></i> Productos Destacados</h2>
+                <div class="product-grid">
+                    <!-- Producto 1 -->
+                    <div class="product-card" data-id="1" data-nombre="LED Full Spectrum 240W" data-precio="149900" data-categoria="iluminacion">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>LED Full Spectrum 240W</h3>
+                        <p>Samsung LM301H, driver Meanwell. Ideal para 80x80.</p>
+                        <div class="price">$149.900</div>
+                        <button class="btn-add-cart">Agregar al carrito</button>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="product-card" data-id="4" data-nombre="Kit Nutrientes Orgánicos" data-precio="42500" data-categoria="nutrientes">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Kit Nutrientes Orgánicos</h3>
+                        <p>Crecimiento + floración + estimulantes. 1L c/u.</p>
+                        <div class="price">$42.500</div>
+                        <button class="btn-add-cart">Agregar al carrito</button>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="product-card" data-id="7" data-nombre="Sustrato Premium 50L" data-precio="18900" data-categoria="sustratos">
+                        <i class="fas fa-mountain"></i>
+                        <h3>Sustrato Premium 50L</h3>
+                        <p>Perlita, humus, micorrizas, turba rubia.</p>
+                        <div class="price">$18.900</div>
+                        <button class="btn-add-cart">Agregar al carrito</button>
+                    </div>
+                    <!-- Producto 4 -->
+                    <div class="product-card" data-id="10" data-nombre="Kit Extracción 4' + Filtro" data-precio="129500" data-categoria="climatizacion">
+                        <i class="fas fa-wind"></i>
+                        <h3>Kit Extracción 4" + Filtro</h3>
+                        <p>Extractor + filtro carbón, control de olores.</p>
+                        <div class="price">$129.500</div>
+                        <button class="btn-add-cart">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-handshake"></i> Nuestros Servicios</h2>
+                <div class="services-flex">
+                    <div class="service-item">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <h3>Asesoría Experta</h3>
+                        <p>Soporte personalizado durante todo tu ciclo de cultivo.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-flask"></i>
+                        <h3>Análisis de Parámetros</h3>
+                        <p>Medición de pH, EC y diagnóstico de nutrientes.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-truck-fast"></i>
+                        <h3>Envíos Discretos</h3>
+                        <p>Entregas a domicilio en todo el país con total privacidad.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Club de Cultivo</h3>
+                        <p>Descuentos exclusivos, seguimiento y sorteos mensuales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-envelope"></i> Contacto</h2>
+                <div class="contacto-wrapper">
+                    <div class="contacto-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>29Grow Store</h3>
+                        <p>Av. Siempre Verde 2949, Córdoba Capital</p>
+                        <p><strong>Horario:</strong> Lun a Vie 10 a 19h · Sáb 10 a 15h</p>
+                        <p><strong>WhatsApp:</strong> +54 351 289-2929</p>
+                        <div class="redes-sociales">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    <div class="contacto-form">
+                        <h3>Consulta Rápida</h3>
+                        <input type="text" placeholder="Tu nombre" id="contactNombre">
+                        <input type="email" placeholder="Email" id="contactEmail">
+                        <textarea rows="3" placeholder="¿Qué necesitas?" id="contactMensaje"></textarea>
+                        <button class="btn-grow" id="enviarConsulta">Enviar mensaje</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 29Grow · Productos para cultivo indoor y cosecha · +18</p>
+            <p style="font-size: 0.7rem; margin-top: 8px;">Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
