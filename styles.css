@@ -709,6 +709,291 @@ footer a:hover {
 }
 
 /* ====================================
+   MODAL PROFESIONAL DE CONFIRMACIÓN
+==================================== */
+.custom-confirm-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+}
+
+.custom-confirm-content {
+    background: white;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 400px;
+    overflow: hidden;
+    animation: modalFadeIn 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.custom-confirm-content.exito {
+    border-top: 4px solid #25D366;
+}
+
+.custom-confirm-header {
+    padding: 1.2rem 1.5rem;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.custom-confirm-header h3 {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-confirm-header h3 i {
+    font-size: 1.3rem;
+}
+
+.custom-confirm-header h3 i.fa-check-circle {
+    color: #25D366;
+}
+
+.custom-confirm-header h3 i.fa-question-circle {
+    color: var(--accent-amber);
+}
+
+.exito-header {
+    background: rgba(37, 211, 102, 0.1);
+}
+
+.exito-header h3 i {
+    color: #25D366;
+}
+
+.custom-confirm-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.custom-confirm-body p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.custom-confirm-footer {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.5rem 1.5rem;
+    background: white;
+}
+
+.confirm-btn-cancel {
+    flex: 1;
+    padding: 0.8rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border-soft);
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-dark);
+}
+
+.confirm-btn-cancel:hover {
+    background: var(--border-soft);
+}
+
+.confirm-btn-accept {
+    flex: 1;
+    padding: 0.8rem;
+    background: var(--green-forest);
+    border: none;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    color: white;
+}
+
+.confirm-btn-accept:hover {
+    background: var(--accent-purple);
+    transform: translateY(-2px);
+}
+
+/* ====================================
+   MODAL DE CHECKOUT
+==================================== */
+.checkout-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+}
+
+.checkout-modal-content {
+    background: white;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.checkout-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--border-soft);
+    background: var(--bg-soft);
+    border-radius: 24px 24px 0 0;
+}
+
+.checkout-modal-header h3 {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+}
+
+.checkout-modal-header h3 i {
+    color: var(--accent-amber);
+    margin-right: 8px;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: var(--transition);
+    padding: 0;
+    line-height: 1;
+}
+
+.close-modal-btn:hover {
+    color: var(--accent-amber);
+}
+
+.checkout-modal-body {
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-amber);
+    box-shadow: 0 0 0 3px rgba(232, 169, 73, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.checkout-modal-footer {
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid var(--border-soft);
+    background: var(--bg-soft);
+    border-radius: 0 0 24px 24px;
+}
+
+.btn-cancelar {
+    flex: 1;
+    padding: 0.8rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border-soft);
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-dark);
+}
+
+.btn-cancelar:hover {
+    background: var(--border-soft);
+}
+
+.btn-enviar-whatsapp {
+    flex: 1;
+    padding: 0.8rem;
+    background: #25D366;
+    border: none;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    color: white;
+}
+
+.btn-enviar-whatsapp:hover {
+    background: #20b859;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .checkout-modal-content,
+    .custom-confirm-content {
+        width: 95%;
+    }
+    
+    .checkout-modal-footer,
+    .custom-confirm-footer {
+        flex-direction: column;
+    }
+}
+
+/* ====================================
    CATEGORÍAS (para catalogo.html)
 ==================================== */
 .categoria-seccion {
